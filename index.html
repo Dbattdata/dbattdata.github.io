@@ -1,4 +1,18 @@
 ---
 layout: home
+title: "Dbattdata"
+subtitle: "Research projects, papers, and ideas"
+entries_layout: grid
 author_profile: true
 ---
+
+## Featured Papers
+
+{% assign papers = site.papers | sort: 'date' | reverse %}
+{% for paper in papers limit: 6 %}
+- [{{ paper.title }}]({{ paper.url }}) <br>
+  *{{ paper.journal }}*<br>
+  {{ paper.authors | join: ", " }}<br>
+{% endfor %}
+
+[See all papers →](/papers/)
