@@ -311,6 +311,10 @@ compress_html:
   ignore:
     envs: development
 
+collections:
+  papers:
+    output: true
+    permalink: /papers/:title/
 
 # Defaults
 defaults:
